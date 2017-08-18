@@ -15,11 +15,11 @@ android {
         vectorDrawables.useSupportLibrary = true
 
         // Room has some weird gradle integration.
-//        javaCompileOptions {
-//            annotationProcessorOptions {
-//                arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
-//            }
-//        }
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
     }
     buildTypes {
         release {
@@ -44,12 +44,12 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 
 // Room Persistence
-//    implementation "android.arch.persistence.room:runtime:$room_version"
-//    implementation "android.arch.persistence.room:rxjava2:$room_version"
-//    kapt "android.arch.persistence.room:compiler:$room_version"
+    implementation "android.arch.persistence.room:runtime:$room_version"
+    implementation "android.arch.persistence.room:rxjava2:$room_version"
+    kapt "android.arch.persistence.room:compiler:$room_version"
 
 // Date Handling via JSR-310
-//    implementation 'com.jakewharton.threetenabp:threetenabp:1.0.5'
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.0.5'
 
 // Anko
 //    implementation "org.jetbrains.anko:anko-appcompat-v7:$anko_version"
