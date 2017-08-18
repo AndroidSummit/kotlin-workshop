@@ -1,10 +1,9 @@
 package org.androidsummit.notepad
 
+import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
-
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 import org.androidsummit.notepad.given.SpaceItemDecoration
@@ -22,8 +21,7 @@ class MainActivity : AppCompatActivity() {
         recycler.adapter = NotesAdapter()
 
         fab.setOnClickListener {
-            Snackbar.make(it, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+            startActivity(Intent(this, CrudActivity::class.java))
         }
     }
 

@@ -10,7 +10,7 @@ import org.threeten.bp.Instant
 class Note {
 
     @PrimaryKey(autoGenerate = true)
-    var id = -1
+    var id = 0
 
     @ColumnInfo(name = "text")
     var text: String? = null
