@@ -33,8 +33,10 @@ class NoteSmokeTest {
             text = "Foo Bar"
         }
         db.noteDao().insert(note)
-        val all = db.noteDao().getAll()
-        assertEquals(1, all.size)
-        assertEquals("Foo Bar", all.first().text)
+        db.noteDao().getAll().subscribe {
+            all ->
+            assertEquals(1, all.size)
+            assertEquals("Foo Bar", all.first().text)
+        }
     }
 }
