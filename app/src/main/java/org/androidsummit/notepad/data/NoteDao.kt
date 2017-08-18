@@ -9,4 +9,7 @@ interface NoteDao {
     @Query("select * from note order by created_at asc")
     fun getAll(): List<Note>
 
+    @Query("select * from note where id in (:arg0) order by created_at asc")
+    fun findById(vararg id: Int): List<Note>
+
 }
