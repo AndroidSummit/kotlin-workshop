@@ -4,7 +4,7 @@ import android.arch.persistence.room.TypeConverter
 
 import org.threeten.bp.Instant
 
-object TypeConverters {
+object Converters {
 
     @JvmStatic
     @TypeConverter
