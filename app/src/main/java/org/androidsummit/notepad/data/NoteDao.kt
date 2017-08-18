@@ -1,6 +1,7 @@
 package org.androidsummit.notepad.data
 
 import android.arch.persistence.room.Dao
+import android.arch.persistence.room.Insert
 import android.arch.persistence.room.Query
 
 @Dao
@@ -8,8 +9,7 @@ interface NoteDao {
 
     @Query("select * from note order by created_at asc")
     fun getAll(): List<Note>
-
-    @Query("select * from note where id in (:arg0) order by created_at asc")
-    fun findById(vararg id: Int): List<Note>
-
+    
+    @Insert
+    fun insert(vararg notes: Note)
 }
