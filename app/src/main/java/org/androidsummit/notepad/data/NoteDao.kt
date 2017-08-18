@@ -9,7 +9,7 @@ interface NoteDao {
 
     @Query("select * from note order by created_at asc")
     fun getAll(): List<Note>
-    
+
     @Insert
     fun insert(vararg notes: Note)
 }
