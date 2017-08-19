@@ -70,4 +70,5 @@ The final stretch! Let's add some convenience extensions to LayoutInflater and R
 * `when` expression
 * Anko for async
 
-**What a pretty app!**
+## What a pretty app!
+<img src="screenshot.png" width=256/>
